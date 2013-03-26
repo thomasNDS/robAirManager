@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>RobAIR : Reservation valid</title>
+     <script type="text/javascript" charset="utf-8">
+
+        function goCmd(){
+	    document.location.href="http://127.0.0.1:5000/commande" 
+	    return true;
+        }
+        
+    </script>
+</head>
+<body>
+
+    <h1>Reservation OK</h1>
+
+    <div>
+      <p> Starting hour : {{start}} </p>
+      <p> Ending hour : {{end}} </p>
+    </div>
+    
+    <div><input type='button' id='reserv' onClick='goCmd()' value='GO to commands'></div>
+
+</body>
+</html> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<title>{% block subtitle %}{% endblock subtitle %}{% block title %}Robair 2013 resource manager{% endblock title %}</title>
+<meta name="description" content="{% block description %}{{ config.SITE_DESCRIPTION }}{% endblock description %}" />
+<meta name="author" content="Salem Harrache" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"  media="screen" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"  media="screen" />
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+{% block head %}{% endblock head %}
+</head>
+
+<body>
+<section>
+<div class="container">
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li><a href="{{ url_for('admin.index') }}" data-toggle="tab">Admin</a></li>
+    <li><a href="http://air.imag.fr/mediawiki/index.php/RobAIR2013" data-toggle="tab">Présentation</a></li>
+    <li><a href="http://air.imag.fr/mediawiki/index.php/RobAIR2013-RICM5-Suivi" data-toggle="tab">RICM5</a></li>
+    <li><a href="http://air.imag.fr/mediawiki/index.php/RobAIR2013-RICM4-Groupe1-Suivi" data-toggle="tab">RICM4 G1</a></li>
+    <li><a href="http://air.imag.fr/mediawiki/index.php/RobAIR2013-RICM4-Groupe3-Suivi" data-toggle="tab">RICM4 G2</a></li>
+    <li><a href="http://air.imag.fr/mediawiki/index.php/RobAIR2013-3I4-Suivi" data-toggle="tab">3I4</a></li>
+    <li><a href="http://fablab.ensimag.fr/index.php/RobAIR/Pilotage_Automatique_du_Robot" data-toggle="tab">Ensimag G1</a></li>
+    <li><a href="http://air.imag.fr/mediawiki/index.php/RobAIR2013" data-toggle="tab">Ensimag G2</a></li>
+    {% if not current_user.is_anonymous() %}
+    <li class="pull-right">
+        <form style="margin: 0 0 0px;" method="GET" action="/logout">
+            <button style="margin-top:3px" class="btn btn-danger" type="submit">Logout</button>
+        </form>
+    </li>
+    {% endif %}
+  </ul>
+</div>
+
+{% block content %}{% endblock content %}
+
+</div>
+</section>
+<footer>
+  <a href="/">Robair</a> {{ now().year }}
+</footer>
+
+</body>
+</html>
