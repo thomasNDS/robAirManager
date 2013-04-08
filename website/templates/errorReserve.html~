@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css')}}" type="text/css" />
+    <title>RobAIR : Error Reservation page</title>
+</head>
+<body>
+ <table BORDER=0 >
+    	<tr></tr>
+	<tr>
+    <h1>Error with the reservation</h1>
+    <td><span style="color:#FF4000"><b> Return to the previous page and be sure your id is a correct id (ex: test@ex.com)</b> </span></td>
+    </tr>
+    <tr>
+    <td><input type="button" value="Return" class=myButton onClick="javascript:history.go(-1)" name= return></a></td>
+    	</tr>
+	<tr></tr>
+    </table>
+        </br>    
+        <h3> RobAir project</h2>
+    
+</body>
+</html>
