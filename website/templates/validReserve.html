@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>RobAIR : Reservation valid</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css')}}" type="text/css" />
      <script type="text/javascript" charset="utf-8">
 
         function goCmd(){
@@ -12,15 +13,20 @@
     </script>
 </head>
 <body>
-
+ <table BORDER=0 >
+    	<tr></tr>
+	<tr>
     <h1>Reservation OK</h1>
 
     <div>
-      <p> Starting hour : {{start}} </p>
-      <p> Ending hour : {{end}} </p>
+      <td><p> <b>Starting hour :</br></b> {{start}} </p></td>
+      <td><p> <b>Ending hour :</br></b> {{end}} </p></td>
     </div>
-    
-    <div><input type='button' id='reserv' onClick='goCmd()' value='GO to commands'></div>
-
+    	</tr>
+    	<td></td><td><div><input type='button' id='reserv' onClick='goCmd()' value='GO to commands' class=myButton></div></td>
+	<tr></tr>
+    </table>
+        </br>    
+        <h3> RobAir project</h2>
 </body>
 </html> 

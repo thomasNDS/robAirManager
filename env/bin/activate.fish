@@ -27,7 +27,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/thomas/robair/websocket_echo_example-master/robair-tabletInterface/robair-resource-manager-local/env"
+set -gx VIRTUAL_ENV "/home/thomas/robair/websocket_echo_example-master/robAirManager/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

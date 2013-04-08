@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/thomas/robair/websocket_echo_example-master/robair-tabletInterface/robair-resource-manager-local/env"
+VIRTUAL_ENV="/home/thomas/robair/websocket_echo_example-master/robAirManager/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

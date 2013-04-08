@@ -1,4 +1,3 @@
-.PHONY: clean pyflakes pep setup upgrade freeze
 SHELL := /bin/bash
 
 # these files should pass pyflakes
@@ -17,12 +16,6 @@ pyflakes:
 pep:
 	pep8 website
 
-setup: requirements.txt
+virtualenv: requirements.txt
 	virtualenv env --python=python2.7
 	./env/bin/pip install -r requirements.txt
-
-upgrade:
-	./env/bin/pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
-
-freeze:
-	./env/bin/pip freeze --local > requirements.txt
